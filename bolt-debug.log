@@ -1,0 +1,3 @@
+2022-11-10T14:30:11.534216 DEBUG  [main] [Bolt::Executor] Started with 36 max thread(s)
+2022-11-10T14:30:15.223890 DEBUG  [main] [Bolt::PAL] Loading modules from /opt/puppetlabs/bolt/lib/ruby/gems/2.7.0/gems/bolt-3.24.0/bolt-modules:/Users/selvakumar/Work/code/modules/mkcustomfact/modules:/Users/selvakumar/Work/code/modules/mkcustomfact/.modules:/opt/puppetlabs/bolt/lib/ruby/gems/2.7.0/gems/bolt-3.24.0/modules
+2022-11-10T14:30:15.225165 DEBUG  [main] [Bolt::Inventory] Tried to load inventory from /Users/selvakumar/Work/code/modules/mkcustomfact/inventory.yaml, but the file does not exist

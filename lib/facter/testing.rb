@@ -24,3 +24,14 @@ Facter.add('puppetconfstat') do
     Facter::Core::Execution.execute('stat -c %z /etc/puppetlabs/puppet/puppet.conf | cut -d"." -f1')
   end
 end
+
+Facter.add("folder_exists") do
+  setcode do
+    folder_path = "/tmp/test"
+    if File.directory?(folder_path)
+      "true"
+    else
+      "false"
+    end
+  end
+end
