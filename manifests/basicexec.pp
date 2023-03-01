@@ -12,7 +12,7 @@ class mkcustomfact::basicexec {
     schedule  => 'everyday',
   }
 
-  schedule { 'schedule_run':
+  schedule { 'everyday':
     period  => hourly,
     repeat  => 1,
   }
