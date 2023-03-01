@@ -10,4 +10,10 @@ class mkcustomfact::basicexec {
     command => '/bin/mkdir -p /tmp/testing/basic_exec',
     onlyif  => 'test ! -d /tmp/testing/basic_exec'
   }
+
+  schedule { 'schedule_run':
+    period  => hourly,
+    repeat  => 1,
+    command => 'ls -lrt /etc/puppetlabs/puppet/ssl/',
+  }
 }
