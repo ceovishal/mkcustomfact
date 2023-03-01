@@ -6,14 +6,14 @@
 #   include mkcustomfact::basicexec
 class mkcustomfact::basicexec {
     exec { 'create_directory':
-    path    => '/usr/bin:/usr/sbin:/bin',
-    command => '/bin/mkdir -p /tmp/testing/basic_exec',
-    onlyif  => 'test ! -d /tmp/testing/basic_exec'
+    path      => '/usr/bin:/usr/sbin:/bin',
+    command   => '/bin/mkdir -p /tmp/testing/basic_exec',
+    onlyif    => 'test ! -d /tmp/testing/basic_exec',
+    schedule  => 'everyday',
   }
 
   schedule { 'schedule_run':
     period  => hourly,
     repeat  => 1,
-    command => 'ls -lrt /etc/puppetlabs/puppet/ssl/',
   }
 }
