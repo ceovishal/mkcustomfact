@@ -1,4 +1,4 @@
-class transfer_file {
+class mkcustomfact::transfer_file {
   file { 'example.txt':
     ensure => present,
     source => 'puppet:///modules/mkcustomfact/example.txt',
