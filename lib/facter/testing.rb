@@ -25,13 +25,13 @@ Facter.add('puppetconfstat') do
   end
 end
 
-Facter.add("folder_exists") do
+Facter.add('folder_exists') do
   setcode do
-    folder_path = "/tmp/test"
+    folder_path = '/tmp/test'
     if File.directory?(folder_path)
-      "true"
+      'true'
     else
-      "false"
+      'false'
     end
   end
 end

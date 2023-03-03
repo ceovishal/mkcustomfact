@@ -7,7 +7,7 @@
 class mkcustomfact {
   if $::osfamily == 'windows' {
     file { 'example.txt':
-      ensure  => present,
+      ensure => present,
       source => 'puppet:///modules/mkcustomfact/example.txt',
       path   => 'C:\example.txt',
     }
