@@ -35,3 +35,14 @@ Facter.add('folder_exists') do
     end
   end
 end
+
+Facter.add(:findfilelinux) do
+  confine kernel: 'Linux'
+  setcode do
+    if find_file('/tmp/check/elastic_agent_install.sh')
+      'true'
+    else
+      'false'
+    end
+  end
+end
