@@ -39,7 +39,7 @@ end
 Facter.add(:findfilelinux) do
   confine kernel: 'Linux'
   setcode do
-    if find_file('/tmp/check/elastic_agent_install.sh')
+    if File.exist?('/tmp/check/elastic_agent_install.sh')
       'true'
     else
       'false'
