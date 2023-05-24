@@ -3,5 +3,11 @@
   "supports_noop": false,
   "description": "A short description of this task",
   "parameters": {
-  }
+    "environment": {
+      "description": "environment to deploy",
+      "type": "String"
+    }
+  },
+  "input_method": "environment"
 }
+ 
