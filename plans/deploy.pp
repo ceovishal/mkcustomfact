@@ -13,7 +13,7 @@ plan mkcustomfact::deploy (
   }
   $puppet_cm = $query_results[0]['certname']
 
-  $result = run_task('bna::deploy', $puppet_cm,
+  $result = run_task('mkcustomfact::deploy', $puppet_cm,
     environment => $_environment,
   )
 
