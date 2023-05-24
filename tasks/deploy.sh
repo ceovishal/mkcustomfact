@@ -27,22 +27,15 @@
 # Learn more at: https://puppet.com/docs/bolt/0.x/writing_tasks.html#ariaid-title11
 #
 
-plan mkcustomfact::deploy (
-  String $environment,
-) {
-  # r10k corrects invalid branches names
-  $_environment = regsubst($environment, '\W', '_', 'G')
 
-  # first we figure out Puppet CM
-  $query_results = puppetdb_query('resources[certname] { type = "Class" and title = "Puppet_enterprise::Master::Code_manager" }')
-  unless $query_results.length == 1 {
-    fail("Failed to determine CodeManager: ${query_results}")
-  }
-  $puppet_cm = $query_results[0]['certname']
 
-  $result = run_task('mkcustomfact::deploy', $puppet_cm,
-    environment => $_environment,
-  )
 
-  return $result
-}
+
+if /opt/puppetlabs/bin/puppet-code deploy "${PT_environment}" --wait | grep -q 'status.*complete' ; then
+  echo Deployed successfully
+  exit 0
+else
+  echo Deployment failed
+  exit 1
+fi
+
