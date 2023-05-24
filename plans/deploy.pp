@@ -1,6 +1,6 @@
 # Plan to deploy a code environment
 # @param environment - environment to deploy
-plan bna::deploy (
+plan mkcustomfact::deploy (
   String $environment,
 ) {
   # r10k corrects invalid branches names
