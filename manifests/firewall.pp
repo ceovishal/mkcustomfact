@@ -1,4 +1,4 @@
-class firewall{
+class mkcustomfact::firewall{
 Firewall {
     require => undef,
   }
