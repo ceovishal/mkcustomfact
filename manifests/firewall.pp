@@ -33,11 +33,11 @@ Firewall {
   firewallchain { 'OUTPUT:security:IPv4':  ensure => present, policy => 'accept', before => undef, }
 
   #custom 
-  firewallchain { 'CUSTOMTEST:raw:IPv4': ensure => present, policy => 'accept', before => undef, }
-  firewallchain { 'CUSTOMSEC:security:IPv4':   ensure => present, policy => 'accept', before => undef, }
-  firewallchain { 'CUSTOMPREROUTING:nat:IPv4':  ensure => present, policy => 'accept', before => undef, }
-  firewallchain { 'CUSTOMPOSTROUTING:mangle:IPv4': ensure => present, policy => 'accept', before => undef, }
-  firewallchain { 'CUSTOMOUTPUT:filter:IPv4':  ensure => present, policy => 'accept', before => undef, }
+  firewallchain { 'CUSTOMTEST:raw:IPv4': ensure => present,  }
+  firewallchain { 'CUSTOMSEC:security:IPv4':   ensure => present,  }
+  firewallchain { 'CUSTOMPREROUTING:nat:IPv4':  ensure => present,  }
+  firewallchain { 'CUSTOMPOSTROUTING:mangle:IPv4': ensure => present,  }
+  firewallchain { 'CUSTOMOUTPUT:filter:IPv4':  ensure => present,  }
 
   ####
   # default IPv6 chains
@@ -69,11 +69,11 @@ Firewall {
   firewallchain { 'OUTPUT:security:IPv6':  ensure => present, policy => 'accept', before => undef, }
   
   #custom ipv6
-  firewallchain { 'CUSTOMTEST:raw:IPv6': ensure => present, policy => 'accept', before => undef, }
-  firewallchain { 'CUSTOMSEC:security:IPv6':   ensure => present, policy => 'accept', before => undef, }
-  firewallchain { 'CUSTOMPREROUTING:nat:IPv6':  ensure => present, policy => 'accept', before => undef, }
-  firewallchain { 'CUSTOMPOSTROUTING:mangle:IPv6': ensure => present, policy => 'accept', before => undef, }
-  firewallchain { 'CUSTOMOUTPUT:filter:IPv6':  ensure => present, policy => 'accept', before => undef, }
+  firewallchain { 'CUSTOMTEST:raw:IPv6': ensure => present, }
+  firewallchain { 'CUSTOMSEC:security:IPv6':   ensure => present,  }
+  firewallchain { 'CUSTOMPREROUTING:nat:IPv6':  ensure => present,  }
+  firewallchain { 'CUSTOMPOSTROUTING:mangle:IPv6': ensure => present,  }
+  firewallchain { 'CUSTOMOUTPUT:filter:IPv6':  ensure => present,  }
 
 
 }
