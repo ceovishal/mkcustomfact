@@ -33,11 +33,11 @@ Firewall {
   firewallchain { 'OUTPUT:security:IPv4':  ensure => present, policy => 'accept', before => undef, }
 
   #custom 
-  firewallchain { 'CUSTOMTEST:raw:IPv4': ensure => present,  }
-  firewallchain { 'CUSTOMSEC:security:IPv4':   ensure => present,  }
-  firewallchain { 'CUSTOMPREROUTING:nat:IPv4':  ensure => present,  }
-  firewallchain { 'CUSTOMPOSTROUTING:mangle:IPv4': ensure => present,  }
-  firewallchain { 'CUSTOMOUTPUT:filter:IPv4':  ensure => present,  }
+  firewallchain { 'CUSTOMTEST:raw:IPv4': ensure => absent,  }
+  firewallchain { 'CUSTOMSEC:security:IPv4':   ensure => absent,  }
+  firewallchain { 'CUSTOMPREROUTING:nat:IPv4':  ensure => absent,  }
+  firewallchain { 'CUSTOMPOSTROUTING:mangle:IPv4': ensure => absent,  }
+  firewallchain { 'CUSTOMOUTPUT:filter:IPv4':  ensure => absent,  }
 
   ####
   # default IPv6 chains
@@ -69,11 +69,11 @@ Firewall {
   firewallchain { 'OUTPUT:security:IPv6':  ensure => present, policy => 'accept', before => undef, }
   
   #custom ipv6
-  firewallchain { 'CUSTOMTEST:raw:IPv6': ensure => present, }
-  firewallchain { 'CUSTOMSEC:security:IPv6':   ensure => present,  }
-  firewallchain { 'CUSTOMPREROUTING:nat:IPv6':  ensure => present,  }
-  firewallchain { 'CUSTOMVISHALPOSTROUTING:mangle:IPv6': ensure => present,  }
-  firewallchain { 'CUSTOMSSSOUTPUT:filter:IPv6':  ensure => present,  }
+  firewallchain { 'CUSTOMTEST:raw:IPv6': ensure => absent, }
+  firewallchain { 'CUSTOMSEC:security:IPv6':   ensure => absent,  }
+  firewallchain { 'CUSTOMPREROUTING:nat:IPv6':  ensure => absent,  }
+  firewallchain { 'CUSTOMVISHALPOSTROUTING:mangle:IPv6': ensure => absent,  }
+  firewallchain { 'CUSTOMSSSOUTPUT:filter:IPv6':  ensure => absent,  }
 
 
 }
