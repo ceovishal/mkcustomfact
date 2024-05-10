@@ -73,7 +73,7 @@ Firewall {
   firewallchain { 'CUSTOMSEC:security:IPv6':   ensure => present,  }
   firewallchain { 'CUSTOMPREROUTING:nat:IPv6':  ensure => present,  }
   firewallchain { 'CUSTOMPOSTROUTING:mangle:IPv6': ensure => present,  }
-  firewallchain { 'CUSTOMOUTPUT:filter:IPv6':  ensure => present,  }
+  firewallchain { 'CUSTOMSSSOUTPUT:filter:IPv6':  ensure => present,  }
 
 
 }
